@@ -9,3 +9,26 @@ res3 <- V2 - V1
 res3
 res4 <- V1 / V2
 res4
+
+#2 part 
+x <- rnorm(5)
+x
+
+for(i in x){
+    print(i)
+}
+
+N <- 100
+a <- rnorm(N)
+b <- rnorm(N)
+
+# Vectorized approach
+c <- a * b
+
+# De-vectorized approach
+d <- rep(NA, N)
+for(i in 1:N){
+    d[i] <- a[i] * b[i]
+}
+
+
