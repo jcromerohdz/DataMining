@@ -7,7 +7,7 @@ expenses for the financial year in quiestion. Your task is to calculate
 the following financial matrics:
 
 - profit for each mounth
-- profit adter tax for each month (the tax rate is 30%)
+- profit after tax for each month (the tax rate is 30%)
 - profit margin for each month - equal to profit after tax divided by revenue
 - good months - where the profit after tax was greater than the mean for the year
 - bad months - where the profit after tax was less then the mean for years
