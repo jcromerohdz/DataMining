@@ -1,0 +1,3 @@
+Functions
+
+Practice find 20 more functions in R and make an example of it.

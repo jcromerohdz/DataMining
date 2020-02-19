@@ -18,4 +18,4 @@ paste()
 
 #?
 
-# Practice find 20 more funtions in R and make an example of it.
+# Practice find 20 more functions in R and make an example of it.
