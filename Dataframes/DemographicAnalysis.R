@@ -10,9 +10,46 @@ getwd()
 setwd("C:\\Users\\username\\Documents\\Rprojects")
 #Mac
 setwd()
-setwd("/home/chris/Documents/itt/Enero_Junio_2020/Mineria_de_datos/DataMining/Dataframes
-")
+setwd('/home/chris/Documents/itt/Enero_Junio_2020/Mineria_de_datos/DataMining/Dataframes')
 getwd()
 rm(stats)
 stats <- read.csv("Demographic-Data.csv")
+
+#------Exploring the data
 stats
+is.data.frame(stats)
+nrow(stats)
+ncol(stats)
+head(stats, n=10)
+tail(stats, n=8)
+str(stats)
+summary(stats)
+
+#------Using the $ sing
+stats
+head(stats)
+stats[3,3]
+stats[3, "Birth.rate"]
+typeof(stats)
+stats$Internet.users
+stats$Internet.users[2]
+stats[ , "Internet.users"]
+levels(stats$Income.Group)
+
+#------Basic operations with dataframes
+stats[1:10, ] #subsetting
+stats[3:9, ]
+stats[c(4, 100)]
+is.data.frame(stats[1, ])
+is.data.frame(stats[,1])
+is.data.frame(stats[,1, drop=F])
+stats[,1, drop=F]
+
+#-------Multiply columns
+stats$Birth.rate * stats$Internet.users
+stats$Birth.rate + stats$Internet.users
+
+#-------Add Columns
+head(stats)
+stats$BRbyIU <- stats$Birth.rate * stats$Internet.users
+head(stats)
