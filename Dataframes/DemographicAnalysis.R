@@ -39,7 +39,7 @@ levels(stats$Income.Group)
 #------Basic operations with dataframes-----------------------
 stats[1:10, ] #subsetting
 stats[3:9, ]
-stats[c(4, 100)]
+stats[c(4, 100),]
 is.data.frame(stats[1, ])
 is.data.frame(stats[,1])
 is.data.frame(stats[,1, drop=F])
@@ -65,6 +65,7 @@ stats$xyz <- NULL
 
 #------Filtering Data Frames -----------------------
 head(stats)
+stats$Internet.users < 2
 filter <- stats$Internet.users < 2 #TRUE
 filter
 stats[filter,]
@@ -82,3 +83,19 @@ levels(stats$Income.Group)
 #Filter by countrie Qatar
 #Filter by countrie Netherlands
 #Filter by countrie Norway
+
+#------Intro to qplot()----------------------
+#install.packages("ggplot2")
+library(ggplot2)
+?qplot
+qplot(data=stats, x=Internet.users)
+qplot(data=stats, x=Income.Group, y=Birth.rate)
+qplot(data=stats, x=Income.Group, y=Birth.rate, size=I(5))
+qplot(data=stats, x=Income.Group, y=Birth.rate, size=I(5), color=I("violet"))
+qplot(data=stats, x=Income.Group, y=Birth.rate, geom="boxplot")
+
+#---------Visualizing what we need -----------------
+qplot(data=stats, x=Internet.users, y=Birth.rate)
+qplot(data=stats, x=Internet.users, y=Birth.rate, color=I("blue"), size=I(1))
+qplot(data=stats, x=Internet.users, y=Birth.rate, color=Income.Group, size=I(1))
+
