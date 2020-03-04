@@ -36,7 +36,7 @@ stats$Internet.users[2]
 stats[ , "Internet.users"]
 levels(stats$Income.Group)
 
-#------Basic operations with dataframes
+#------Basic operations with dataframes-----------------------
 stats[1:10, ] #subsetting
 stats[3:9, ]
 stats[c(4, 100)]
@@ -53,3 +53,32 @@ stats$Birth.rate + stats$Internet.users
 head(stats)
 stats$BRbyIU <- stats$Birth.rate * stats$Internet.users
 head(stats)
+
+#------Thigs to know
+stats$xyz <- 1:5
+head(stats, n=12)
+
+#------Remove columns
+head(stats)
+stats$BRbyIU <- NULL
+stats$xyz <- NULL
+
+#------Filtering Data Frames -----------------------
+head(stats)
+filter <- stats$Internet.users < 2 #TRUE
+filter
+stats[filter,]
+
+stats[stats$Birth.rate > 40,]
+stats[stats$Birth.rate > 40 & stats$Internet.users < 2,]
+stats[stats$Income.Group == "High income",]
+levels(stats$Income.Group)
+
+#Practice
+#Filter countries by Low income
+#Filter countries by Lower middle income
+#Filter countries by Upper middle income
+#Filter by countrie Malta
+#Filter by countrie Qatar
+#Filter by countrie Netherlands
+#Filter by countrie Norway
