@@ -5,3 +5,13 @@ You are required to produce a scatterplot illustrating Birth Rate and Internet U
 statistics by Country.
 
 The scatterplot needs to also be categorised by Countries’ Income Groups. 
+
+Requirements changed
+You have recevied an urgent update from your Boss.
+
+You are required to produce a second scatterplot illustrationg Birth Rate and
+Internet Usage statistics by Contry.
+
+However, this time the scatterplot needs to be categorised by Countrie Regions.
+
+Additional data has been supplied in the form of R vectors.
