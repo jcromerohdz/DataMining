@@ -135,7 +135,7 @@ qplot(data = merged, x = Internet.users, y = Birth.rate,
 #2. Exploring Datasets: head(), tail(), summary(), str()
 #3. Using the $ sing
 #4. Basic operations with Data Frames
-#5. Filtering a Date Frame
+#5. Filtering a Data Frame
 #6. Introduction to qplot
 #7. Visualizing with qplot: Part I
 #8. Buildign Data Frames: data.frame()
