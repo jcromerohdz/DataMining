@@ -140,4 +140,5 @@ qplot(data = merged, x = Internet.users, y = Birth.rate,
 #7. Visualizing with qplot: Part I
 #8. Buildign Data Frames: data.frame()
 #9. Marging Data Frames: marge()
-#10. Visualizing with qplot: Part II
+#10. Visualizing with qplot: Part 
+
