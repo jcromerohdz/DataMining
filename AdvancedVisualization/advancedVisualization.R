@@ -74,3 +74,39 @@ p2 + geom_point(aes(x=BudgetMillions)) + xlab("Budget Millions $$$")
 p2 + geom_line() + geom_point()
 # reduce line size
 p2 + geom_line(size=1) + geom_point()
+
+
+#----------------- Mapping vs Setting
+r <- ggplot(movies, aes(x=CriticRating, y=AudienceRating))
+r + geom_point()
+
+# Add color
+#1. Mapping (what we've done so far)
+r + geom_point(aes(color = Genre))
+#2. By Setting:
+r + geom_point(color="DarkGreen")
+# ERROR
+r + geom_point(aes(color = "DarkGreen"))
+
+#1. size by Mapping
+r + geom_point(aes(size=BudgetMillions))
+#2. size by Setting
+r + geom_point(size=10)
+# ERROR
+r + geom_point(aes(size=10))
+
+#-------------- Histograms and Density Charts (Statistics)
+s <- ggplot(data=movies, aes(x=BudgetMillions))
+s + geom_histogram(binwidth = 10)
+
+# Add color
+s + geom_histogram(binwidth =10, aes(fill=Genre))
+# Add a border
+s + geom_histogram(binwidth =10, aes(fill=Genre), color="Black")
+
+# Density charts:
+s + geom_density(aes(fill=Genre))
+s + geom_density(aes(fill=Genre), position = "stack")
+
+
+   
