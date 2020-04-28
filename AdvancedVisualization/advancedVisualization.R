@@ -109,4 +109,69 @@ s + geom_density(aes(fill=Genre))
 s + geom_density(aes(fill=Genre), position = "stack")
 
 
-   
+#------------------ Starting Layer Tips
+
+t <- ggplot(movies, aes(x=AudienceRating))
+t + geom_histogram(binwidth = 10, fill="White", color="Blue")   
+
+#another way
+t <- ggplot(data=movies)
+t + geom_histogram(binwidth=10,
+                   aes(x=AudienceRating),
+                   fill="White", color="Blue")
+
+t + geom_histogram(binwidth=10,
+                   aes(x=CriticRating),
+                   fill="White", color="Blue")
+t <- ggplot()
+
+#-------------------- Statistical Transformation
+
+?geom_smooth
+
+u <- ggplot(movies, aes(x=CriticRating, y=AudienceRating,
+                        color=Genre))
+u + geom_point() + geom_smooth(fill=NA)
+
+#boxplots
+u <- ggplot(movies, aes(x=Genre, y=AudienceRating,
+                        color=Genre))
+
+u + geom_boxplot()  
+u + geom_boxplot(size=1.2)
+u + geom_boxplot(size=1.2) + geom_point()
+# tip / hack
+u + geom_boxplot(size=1.2) + geom_jitter()
+# another way
+u + geom_jitter() + geom_boxplot(size=1.2, alpha=0.5)
+
+#------------------ Using Facets
+v <- ggplot(movies, aes(x=BudgetMillions))
+v + geom_histogram(binwidth = 10, aes(fill=Genre),
+                   color="Black")
+#Facets
+v + geom_histogram(binwidth = 10, aes(fill=Genre),
+                   color="Black") + facet_grid(Genre~., scales="free")
+
+#scatterplots:
+w <- ggplot(movies, aes(x=CriticRating, y=AudienceRating,
+                        color=Genre))
+
+
+w + geom_point(size=3) + facet_grid(Genre~.)
+
+w + geom_point(size=3) + facet_grid(.~Year)
+
+w + geom_point(size=3) + facet_grid(Genre~Year)
+
+w + geom_point(size=3) + 
+  geom_smooth() + 
+  facet_grid(Genre~Year)
+
+w + geom_point(aes(size=BudgetMillions)) + 
+  geom_smooth() + 
+  facet_grid(Genre~Year)
+
+
+
+
