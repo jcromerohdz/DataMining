@@ -6,7 +6,7 @@ getwd()
 dataset <- read.csv('Salary_Data.csv')
 
 # Splitting the dataset into the Training set and Test set
-# Install.packages('caTools)
+# Install.packages('caTools')
 library(caTools)
 set.seed(123)
 split <- sample.split(dataset$Salary, SplitRatio = 2/3)
