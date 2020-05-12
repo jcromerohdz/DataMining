@@ -30,6 +30,8 @@ summary(regressor)
 y_pred = predict(regressor, newdata = test_set)
 y_pred
 
+# Assigment: visualize the siple liner regression model with R.D.Spend 
+
 # Building the optimal model using Backward Elimination
 regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,
                data = dataset )
@@ -46,6 +48,9 @@ summary(regressor)
 regressor = lm(formula = Profit ~ R.D.Spend + Marketing.Spend,
                data = dataset )
 summary(regressor)
+
+y_pred = predict(regressor, newdata = test_set)
+y_pred
 
 # Homework analise the follow atomation backwardElimination function 
 backwardElimination <- function(x, sl) {
