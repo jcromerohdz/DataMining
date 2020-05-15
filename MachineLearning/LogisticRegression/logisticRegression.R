@@ -49,7 +49,7 @@ ggplot(test_set, aes(x=Age, y=Purchased)) + geom_point() +
 
 # Visualization the Training set result
 # install.packages('ElemStatLearn') No work for me, 
-# manual mode 1. Go to this URL https://cran.r-project.org/src/contrib/Archive/ElemStatLearn/
+# manual mode. Go to this URL https://cran.r-project.org/src/contrib/Archive/ElemStatLearn/
 # Download with the latest date 2019-08-12 09:20	12M
 # Then follow this page steps https://riptutorial.com/r/example/5556/install-package-from-local-source
 
