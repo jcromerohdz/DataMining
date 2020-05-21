@@ -67,4 +67,5 @@ points(set, pch = 21, bg = ifelse(set[, 3] == 1, 'green4', 'red3'))
 
 # Plotting the tree
 plot(classifier)
-text(classifier)
+text(classifier, cex=0.6)
+
