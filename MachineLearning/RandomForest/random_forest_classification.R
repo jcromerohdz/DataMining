@@ -1,5 +1,9 @@
 # Random Forest Classification
 
+getwd()
+setwd("/home/chris/Documents/itt/Enero_Junio_2020/Mineria_de_datos/DataMining/MachineLearning/RandomForest")
+getwd()
+
 # Importing the dataset
 dataset = read.csv('Social_Network_Ads.csv')
 dataset = dataset[3:5]
@@ -25,13 +29,16 @@ library(randomForest)
 set.seed(123)
 classifier = randomForest(x = training_set[-3],
                           y = training_set$Purchased,
-                          ntree = 500)
+                          ntree =10)
+
 
 # Predicting the Test set results
 y_pred = predict(classifier, newdata = test_set[-3])
+y_pred
 
 # Making the Confusion Matrix
 cm = table(test_set[, 3], y_pred)
+cm
 
 # Visualising the Training set results
 library(ElemStatLearn)
