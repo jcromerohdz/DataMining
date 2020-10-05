@@ -14,8 +14,14 @@ res4
 x <- rnorm(5)
 x
 
+# R-specific programming loop
 for(i in x){
     print(i)
+}
+
+# Conventional programming loop
+for(j in 1:5){
+  print(x[j])
 }
 
 N <- 100
